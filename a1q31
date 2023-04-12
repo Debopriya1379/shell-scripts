@@ -1,0 +1,12 @@
+b=31
+c=32
+d=33
+a=b
+b=c=d=c
+echo $a
+echo $b
+echo $c
+echo $d
+echo $$b
+echo $$$d
+

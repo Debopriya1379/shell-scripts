@@ -1,0 +1,21 @@
+# Initialize variables
+line_count=0
+word_count=0
+
+# Read input from standard input
+while read line
+do
+    # Increment line count
+    ((line_count++))
+
+    # Count number of words in line
+    words=($line)
+    ((word_count+=${#words[@]}))
+    if [[ $line == "exit" ]]; then
+        break
+    fi
+done
+
+# Print the results
+echo "Number of lines: $(($line_count-1))"
+echo "Number of words: $(($word_count-1))"

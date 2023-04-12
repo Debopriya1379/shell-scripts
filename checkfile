@@ -1,0 +1,14 @@
+if [ greatest ] 
+then
+	echo file exits
+	if [ -w greatest ]
+	then
+		echo file is writtable	
+	else
+		chmod u+w greatest
+		chmod u-x greatest
+		echo Now file is writtable but not executable
+	fi
+else
+echo file does not exits
+fi

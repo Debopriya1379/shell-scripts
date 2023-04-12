@@ -1,0 +1,14 @@
+d=`date +%H`
+if [ $d -gt 24 -a $d -lt 12 ]
+then
+	echo Good morning
+elif [ $d -gt 12 -a $d -lt 16 ]
+then 
+	echo Good afternoon
+elif [ $d -gt 16 -a $d -lt 19 ]
+then
+	echo Good evening
+else
+	echo Good night
+fi
+

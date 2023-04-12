@@ -1,0 +1,12 @@
+echo Enter your age
+read a
+if test $a -ge 18
+then
+echo You are eligible to vote
+elif test $a -lt 0
+then
+echo Enter valid age please
+else
+echo sorry you are too young to vote
+fi 
+

@@ -1,0 +1,14 @@
+echo Enter 3 numbers
+read a
+read b
+read c
+if test $a -gt $b -a $a -gt $c
+then
+echo greatest is $a
+elif test $b -gt $c
+then
+echo greatest is $b
+else
+echo greatest is $c
+fi
+

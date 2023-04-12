@@ -1,0 +1,13 @@
+for file in *
+do
+  if [ -f "$file" ] && [ -r "$file" ] # Check if file is a regular file and readable
+  then
+    # Extract the file name, size, and permissions
+    filename=$(basename "$file")
+    size=$(wc -c < "$file")
+    permissions=$(ls -l "$file" | cut -d" " -f1)
+
+    # Write the file information to the backup file
+    echo "$filename $size $permissions" >> backup
+  fi
+done

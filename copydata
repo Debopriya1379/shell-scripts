@@ -1,0 +1,15 @@
+echo Enter file name to be copied
+read cfile
+if [ $cfile ]
+then
+	echo Enter file name to append data
+	read pfile
+	if [ $pfile ]
+	then
+		cat $cfile >> $pfile
+	else
+		echo File does not exist
+	fi
+else
+	echo File does not exist
+fi

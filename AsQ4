@@ -1,0 +1,6 @@
+echo "Program name: $0"
+
+for arg in "$@"
+do
+  echo "$arg"
+done

@@ -1,0 +1,30 @@
+# Prompt the user to enter a username
+echo "Enter the username:"
+read username
+
+# Use grep to search for the user in the /etc/passwd file
+userinfo=$(grep "^$username:" /etc/passwd)
+
+# Check if the user exists in the /etc/passwd file
+if [ -z "$userinfo" ]
+then
+  echo "User not found"
+else
+  # Extract the fields from the /etc/passwd file
+  user=$(echo $userinfo | cut -d: -f1)
+  password=$(echo $userinfo | cut -d: -f2)
+  uid=$(echo $userinfo | cut -d: -f3)
+  gid=$(echo $userinfo | cut -d: -f4)
+  comment=$(echo $userinfo | cut -d: -f5)
+  home=$(echo $userinfo | cut -d: -f6)
+  shell=$(echo $userinfo | cut -d: -f7)
+
+  # Display the user information
+  echo "Username: $user"
+  echo "Password: $password"
+  echo "UID: $uid"
+  echo "GID: $gid"
+  echo "Comment: $comment"
+  echo "Home Directory: $home"
+  echo "Shell: $shell"
+fi

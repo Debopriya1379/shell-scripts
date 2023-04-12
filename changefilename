@@ -1,0 +1,3 @@
+echo changing all file names in this folder uppercase to lowercase...
+rename -f 'y/A-Z/a-z/' *
+echo done
