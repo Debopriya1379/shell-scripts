@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Enter a list of numbers separated by spaces: "
+read -a numbers
+
+positive_count=0
+negative_count=0
+
+for i in "${numbers[@]}"
+do
+    if [ $i -gt 0 ]
+    then
+        positive_count=$((positive_count + 1))
+    elif [ $i -lt 0 ]
+    then
+        negative_count=$((negative_count + 1))
+    fi
+done
+
+echo "Positive numbers entered: $positive_count"
+echo "Negative numbers entered: $negative_count"
+

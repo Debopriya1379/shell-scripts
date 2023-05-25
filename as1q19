@@ -1,0 +1,18 @@
+number=12345
+
+# Convert number to string
+number_str="${number}"
+
+# Reverse the string
+reversed_str=""
+length=${#number_str}
+for (( i=$length-1; i>=0; i-- ))
+do
+    reversed_str="${reversed_str}${number_str:i:1}"
+done
+
+# Convert reversed string back to number
+reversed_number=$((reversed_str))
+
+# Print the reversed number
+echo "Reversed number: $reversed_number"

@@ -1,0 +1,2 @@
+who | tee who_output.txt
+

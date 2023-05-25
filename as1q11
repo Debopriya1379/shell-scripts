@@ -1,0 +1,7 @@
+echo "Currently logged in users:"
+who | awk '{print $1}' | sort -u
+
+echo " "
+
+echo "Users who have logged out:"
+last | awk '{print $1}' | sort -u
